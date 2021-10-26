@@ -1,0 +1,25 @@
+databaseChangeLog:
+  -  preConditions:
+  -  runningAs:
+       username:  root
+
+  -  changeSet:
+       id:  2
+       author:  sohan
+       changes:
+         -  createTable:
+              tableName:  division
+              columns:
+                -  column:
+                     name:  id
+                     type:  int
+                     autoIncrement:  true
+                     constraints:
+                       primaryKey:  true
+                       nullable:  false
+                -  column:
+                     name:  name
+                     type:  varchar(255)
+                -  column:
+                     name:  code
+                     type:  varchar(255)
