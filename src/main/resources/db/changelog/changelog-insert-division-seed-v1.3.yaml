@@ -7,26 +7,26 @@ databaseChangeLog:
       author: sohan
       changes:
         - loadData:
-            catalogName: cat
+            catalogName: liquibase
             columns:
               - column:
                   header: header1
                   name: id
-                  type: int
+                  type: NUMERIC
               - column:
                   index: 1
                   name: name
-                  type: varchar(255)
+                  type: STRING
               - column:
                   index: 2
                   name: code
-                  type: varchar(255)
+                  type: NUMERIC
             commentLineStartsWith: //
             encoding: UTF-8
             file: ./division.csv
             quotchar: ''''
             relativeToChangelogFile: true
-            schemaName: public
-            separator: ;
+            schemaName: liquibase
+            separator: ','
             tableName: division
             usePreparedStatements: true
