@@ -1,0 +1,28 @@
+databaseChangeLog:
+  -  preConditions:
+  -  runningAs:
+       username:  root
+  - changeSet:
+      id: 5
+      author: sohan
+      changes:
+        - loadData:
+            catalogName: liquibase
+            columns:
+              - column:
+                  header: header1
+                  name: id
+                  type: NUMERIC
+              - column:
+                  index: 1
+                  name: name
+                  type: STRING
+            commentLineStartsWith: //
+            encoding: UTF-8
+            file: ./role.csv
+            quotchar: ''''
+            relativeToChangelogFile: true
+            schemaName: liquibase
+            separator: ','
+            tableName: role
+            usePreparedStatements: true
