@@ -8,4 +8,10 @@
       http://www.liquibase.org/xml/ns/pro
       http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd">
 
+    <changeSet id="1" author="shawon">
+        <addColumn tableName="user"
+        schemaName="liquibase">
+            <column name="userPassword" type="varchar(255)"></column>
+        </addColumn>
+    </changeSet>
 </databaseChangeLog>
