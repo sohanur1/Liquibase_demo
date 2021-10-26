@@ -1,0 +1,32 @@
+databaseChangeLog:
+  -  preConditions:
+  -  runningAs:
+       username:  root
+  - changeSet:
+      id: 4
+      author: sohan
+      changes:
+        - loadData:
+            catalogName: cat
+            columns:
+              - column:
+                  header: header1
+                  name: id
+                  type: int
+              - column:
+                  index: 1
+                  name: name
+                  type: varchar(255)
+              - column:
+                  index: 2
+                  name: code
+                  type: varchar(255)
+            commentLineStartsWith: //
+            encoding: UTF-8
+            file: ./division.csv
+            quotchar: ''''
+            relativeToChangelogFile: true
+            schemaName: public
+            separator: ;
+            tableName: division
+            usePreparedStatements: true

@@ -5,3 +5,5 @@ databaseChangeLog:
       file: classpath*:db/changelog/changelog-create-division-v1.1.yaml
   - include:
       file: classpath*:db/changelog/changelog-create-role-v1.2.yaml
+  - include:
+      file: classpath*:db/changelog/changelog-insert-division-seed-v1.3.yaml
