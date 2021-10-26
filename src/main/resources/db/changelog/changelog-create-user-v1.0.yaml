@@ -1,0 +1,31 @@
+databaseChangeLog:
+  -  preConditions:
+  -  runningAs:
+       username:  root
+
+  -  changeSet:
+       id:  1
+       author:  sohan
+       changes:
+         -  createTable:
+              tableName:  user
+              columns:
+                -  column:
+                     name:  id
+                     type:  int
+                     autoIncrement:  true
+                     constraints:
+                       primaryKey:  true
+                       nullable:  false
+                -  column:
+                     name:  name
+                     type:  varchar(255)
+                -  column:
+                     name:  email
+                     type:  varchar(255)
+                -  column:
+                     name:  birthdate
+                     type:  varchar(255)
+                -  column:
+                     name:  password
+                     type:  varchar(255)
