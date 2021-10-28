@@ -1,0 +1,14 @@
+databaseChangeLog:
+  -  preConditions:
+  -  runningAs:
+       username:  root
+  - changeSet:
+      id: 7
+      author: sohan
+      changes:
+        - addColumn:
+            tableName: role
+            columns:
+              - column:
+                  name: Is_Active
+                  type: BOOLEAN
