@@ -9,3 +9,5 @@ databaseChangeLog:
       file: classpath*:db/changelog/changelog-insert-division-seed-v1.3.yaml
   - include:
       file: classpath*:db/changelog/changelog-insert-role-seed-v1.4.yaml
+  - include:
+      file: classpath*:db/changelog/changelog-update-user-v1.5.yaml

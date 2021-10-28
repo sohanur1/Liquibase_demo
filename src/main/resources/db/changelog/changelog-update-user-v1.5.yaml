@@ -1,0 +1,14 @@
+databaseChangeLog:
+  -  preConditions:
+  -  runningAs:
+       username:  root
+  - changeSet:
+      id: 6
+      author: sohan
+      changes:
+        - addColumn:
+            tableName: user
+            columns:
+              - column:
+                  name: Address
+                  type: varchar(255)
